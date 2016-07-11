@@ -1,0 +1,15 @@
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\bin\x86\Debug\PdfMerger.exe.config
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.Form1.resources
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.Properties.Resources.resources
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.csproj.GenerateResource.Cache
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\bin\x86\Debug\PdfMerger.exe.manifest
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\bin\x86\Debug\PdfMerger.application
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\bin\x86\Debug\PdfMerger.exe
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\bin\x86\Debug\PdfMerger.pdb
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\bin\x86\Debug\itextsharp.dll
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\bin\x86\Debug\itextsharp.xml
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.exe.manifest
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.application
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.exe
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.pdb
+C:\Users\etienne\Documents\Visual Studio 2013\Projects\PdfMerger\PdfMerger\obj\x86\Debug\PdfMerger.csprojResolveAssemblyReference.cache
