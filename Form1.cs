@@ -18,18 +18,29 @@ namespace PdfMerger
 {
     // classe per la gestione semplificata dei dati dei file
     // per consentire la ricerca di corrispondenze tra loro.
+	public class Cliente
+	{
+		public string conto;
+		public string path;
+
+		public Cliente(string conto, string path)
+		{
+			this.conto = conto;
+			this.path = path;
+		}
+	}
 
     public partial class Form1 : Form
     {
         public List<string>[] arrayListZ = new List<string>[100000];	// limit len list
-        public List<Cliente> listaClienti = new List<Cliente>();
+        public List<Cliente> listaClienti = new List<Cliente>();		
         public List<Cliente> tmpList;
         public List<string> tmpArray = new List<string>();
         
         
         public Logger myLog = LogManager.GetLogger("Main");
 
-        // Main del programma
+        // Main 
         public Form1()
         {
             InitializeComponent();
@@ -44,16 +55,11 @@ namespace PdfMerger
             DialogResult result = folderDlg.ShowDialog();
             if (result == DialogResult.OK)
             {
-                txtPathBox.Text = folderDlg.SelectedPath;                           //assegna al textBox il valore del path
-                //Application.Restart();                                              //ricarica l'applicazione
+                txtPathBox.Text = folderDlg.SelectedPath;                           //assegna al textBox il valore del path                                            //ricarica l'applicazione
             }
         }
 
-        private void butCancel_Click(object sender, EventArgs e)
-        {
-            //this.Close();
-            Application.Exit();
-        }
+        private void butCancel_Click(object sender, EventArgs e) { Application.Exit(); }
 
         private void butContinua_Click(object sender, EventArgs e)
         { 
@@ -117,9 +123,6 @@ namespace PdfMerger
                 string test;
                 string fileOut = "";
                 string pathFileOut = "";
-                //nell'altro metodo per il corretto svolgimento della procedura bisognava entrare nella directory dalla quale si preleva il file db
-                //Directory.SetCurrentDirectory(folder);
-                //controllare se davvero è quello il punto di partenza corretto oppure si può procedere con i path relativi
 
                 for (int p = 0; p < listaClienti.Count; p++)
                 {
@@ -130,7 +133,6 @@ namespace PdfMerger
                     
                     tmpList.ForEach(delegate(Cliente c)
                     {
-                        //Console.WriteLine(String.Format("{0} {1}", c.conto, c.path));
                         tmpArray.Add(c.conto.ToString());
                         fileOut = c.conto + @".pdf";
                         fileOut = fileOut.Replace("/", "_");
@@ -329,54 +331,7 @@ namespace PdfMerger
             }
             
         }
-        /*
-        private void MergeMultiplePDFIntoSinglePDFClienti(List<Cliente> pdfFiles, string outputFilePath)
-        {
-
-            List<string> tmp = new List<string>();
-            for (int g = 0; g < pdfFiles.Count; g++) {
-                tmp.Add(pdfFiles[g].conto + "," + pdfFiles[g].path);
-            }
-
-            string strack = string.Join(",", pdfFiles);
-
-            using (FileStream stream = new FileStream(outputFilePath, FileMode.Create))
-            using (Document doc = new Document())
-            using (PdfCopy pdf = new PdfCopy(doc, stream))
-            {
-                try
-                {
-                    doc.Open();
-
-                    PdfReader reader = null;
-                    PdfImportedPage page = null;
-
-                    //fixed typo
-                    pdfFiles.ForEach(file =>
-                    {
-                        reader = new PdfReader(file);
-
-                        for (int i = 0; i < reader.NumberOfPages; i++)
-                        {
-                            page = pdf.GetImportedPage(reader, i + 1);
-                            pdf.AddPage(page);
-                        }
-                        pdf.FreeReader(reader);
-                        reader.Close();
-                    });
-                }
-                catch (Exception ex)
-                {
-                    myLog.Error("==== ERROR ====");
-                    myLog.Error("Informazioni addizionali:");
-                    myLog.Error("L'errore dovrebbe essere presente in uno dei seguenti File: ");
-                    myLog.Error(strack);
-                    myLog.Error(ex.ToString());
-                }
-            }
-
-        }
-        */
+        
         private void btSofoflia2_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderDlg = new FolderBrowserDialog();
@@ -454,21 +409,6 @@ namespace PdfMerger
                 txtPathBox4.Text = folderDlg.SelectedPath;
             }
         }
-
-        
-
+			
     }
-
-    public class Cliente
-    {
-        public string conto;
-        public string path;
-
-        public Cliente(string conto, string path)
-        {
-            this.conto = conto;
-            this.path = path;
-        }
-    }
-
 }
